@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" class="notranslate" translate="no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+    <meta name="google" content="notranslate" />
+    <link rel="icon" href="favicon.ico">
+    <title>Clasificador de Perros y Gatos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    
+    <main>
+      <div class="px-4 py-2 my-2 text-center border-bottom">
+        <img class="d-block mx-auto mb-2" src="assets/images/android-chrome-512x512.png" alt="My Icon" width="120">
+        <h1 class="display-5 fw-bold">Clasificador de Perros y Gatos mediante IA</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-0">Clasificaci&oacute;n de imágenes (Perro / Gato) usando la c&aacute;mara web utilizando Tensorflow js</p>
+          <p class="mt-2 mb-4">El modelo de IA (Red Neuronal Convolucional -CNN-) puedes revisarlo <a href="https://colab.research.google.com/drive/1dSnMDWLlbXiW3_9nYjQFkasxC72ucD-h" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+            aquí
+          </a>
+        </p>
+        </div>
+      </div>
+
+      <div class="b-example-divider"></div>
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 col-md-4 offset-md-4 text-center">
+            <video id="video" playsinline autoplay style="width: 1px;"></video>
+            <button class="btn btn-primary mb-2" id="cambiar-camara" onclick="cambiarCamara();">Cambiar camara</button>
+            <canvas id="canvas" width="400" height="400" style="max-width: 100%;"></canvas>
+            <canvas id="othercanvas" width="150" height="150" style="display: none"></canvas>
+            <div id="resultado"></div>            
+          </div>
+        </div>
+      </div>
+
+      <div class="b-example-divider"></div>
+
+      <div class="text-secondary mt-5 px-4 py-2 text-center" style="background-color: #292b2c;">
+        <div class="py-5">
+          <h1 class="display-5 fw-bold text-white">Enrique Marín Fernández</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">Revisa mi <a href="https://emarifer-landing-page.netlify.app/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: goldenrod;">Landing Page</a>.</p>
+          </div>
+          <a href="https://github.com/emarifer" target="_blank" rel="noopener noreferrer">
+            <img class="d-block mx-auto mb-2" src="assets/images/github_icon.png" alt="GitHub" width="120">
+          </a>
+          <br>
+          <p style="color: darkgrey;">© 2021 emarifer. MIT License</p>
+        </div>
+      </div>
+
+      <div class="b-example-divider mb-0"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
